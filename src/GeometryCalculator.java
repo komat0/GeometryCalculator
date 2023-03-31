@@ -15,14 +15,9 @@ public class GeometryCalculator {
 
     public static boolean isTriangleRightAngled(double a, double b, double c) {
 
-        if ((a + b > c) && (a + c > b) && (b + c > a)) {
-            return true;
-        }
-        return false;
+        return (a + b > c) && (a + c > b) && (b + c > a);
     }
 
-    // перед расчетом площади рекомендуется проверить возможен ли такой треугольник
-    // методом isTriangleRightAngled, если невозможен вернуть -1.0
     public static double getTriangleSquare(double a, double b, double c) {
 
         if (isTriangleRightAngled(a, b, c)) {
